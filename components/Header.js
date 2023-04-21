@@ -69,7 +69,7 @@ function Header() {
           {searchInput && (
               <div className="calendar flex flex-col col-span-3 mx-auto">
                   {isMobile ? (
-        <div className="calendar">
+        <div>
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}

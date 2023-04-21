@@ -122,6 +122,10 @@ color:#FF6D60;
   border:2px solid yellow;
   transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
+.calendar{
+  margin-left:-190px;
+ 
+ }
 }
 @media (min-width: 768px) {
   .help{
@@ -153,7 +157,4 @@ color:#FF6D60;
  .footer{
   padding-left:11.5rem;
  }
- .calendar{
-  margin-left:-90px;
  
- }
