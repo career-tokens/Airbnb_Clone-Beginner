@@ -9,7 +9,7 @@ import {
 
 function Header() {
   return (
-      <header className="sticky top-0 z-50 grid grid-cols-3
+      <header className="matha sticky top-0 z-50 grid grid-cols-3
        bg-white shadow-md p-5 md:px-10">
           {/*left , using Image from next so img src not req*/}
           <div className="relative flex items-center 

@@ -32,6 +32,9 @@ height:5.5rem;
     .change{
       margin-left:24px;
     }
+    .matha {
+    position: unset;
+  }
 }
 @media (max-width: 576px) {
   .searchbar {
