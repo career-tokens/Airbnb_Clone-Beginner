@@ -1,13 +1,35 @@
 import React from 'react';
 import Image from "next/legacy/image";
+import { useState } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import {
     MagnifyingGlassIcon,
     GlobeAltIcon,
     Bars3Icon,
     UserIcon
 } from '@heroicons/react/24/solid';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRangePicker } from 'react-date-range';
 
 function Header() {
+    const [searchInput, setSearchInput] = useState("");
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
+    
+    const isMobile = useMediaQuery("(max-width: 767px)");
+    const selectionRange = {
+        startDate: startDate,
+        endDate: endDate,
+        key:'selection'
+    }
+
+    const handleSelect = (ranges) => {
+        setStartDate(ranges.selection.startDate);
+        setEndDate(ranges.selection.endDate);
+    }
+
+
   return (
       <header className="matha sticky top-0 z-50 grid grid-cols-3
        bg-white shadow-md p-5 md:px-10">
@@ -24,7 +46,12 @@ function Header() {
           </div>
           {/* middle-search  */}
           <div className="flex items-center border-2 searchbar">
-              <input type="text" placeholder="   Start your search" className="input"/>
+              <input
+                  value={searchInput}
+                  onChange={(ev)=>{setSearchInput(ev.target.value)}}
+                  type="text"
+                  placeholder="   Start your search"
+                  className="input" />
               <MagnifyingGlassIcon className="search-icon hidden md:inline-flex h-8 bg-red-400 text-white
                rounded-full p-2 cursor-pointer"/>
           </div>
@@ -39,6 +66,35 @@ function Header() {
                   <UserIcon className="h-6"/>
               </div>
           </div>
+          {searchInput && (
+              <div className="calendar flex flex-col col-span-3 mx-auto">
+                  {isMobile ? (
+        <div className="calendar">
+          <DateRangePicker
+            ranges={[selectionRange]}
+            minDate={new Date()}
+            rangeColors={["#FD5B61"]}
+            onChange={handleSelect}
+            showSelectionPreview={false}
+            showPreview={false}
+            staticRanges={[]}
+            inputRanges={[]}
+          />
+        </div>
+                  ) : (
+                          
+                    <div className="flex flex-col col-span-3 mx-auto">
+          <DateRangePicker
+            ranges={[selectionRange]}
+            minDate={new Date()}
+            rangeColors={["#FD5B61"]}
+            onChange={handleSelect}
+          />
+        </div>
+        // Render something else for larger screens
+      )}
+              </div>
+          )}
         </header>
   )
 }
