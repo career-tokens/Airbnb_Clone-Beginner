@@ -82,27 +82,34 @@ color:#FF6D60;
 }
 @media (max-width: 576px) {
  .help{
-  background-color:yellow;
-  color:purple;
+  background-color:black;
+  color:white;
   border-radius:1.5rem;
   font-size:17px;
   padding:5px;
   padding-left:2px;
   width:165px;
-  border:2px solid purple;
+  border:2px solid white;
   margin-top:9px;
  }
+ .help:hover{
+    
+  background-color:purple;
+  color:yellow;
+  border:2px solid yellow;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
 }
 @media (min-width: 768px) {
   .help{
-   background-color:yellow;
-   color:purple;
+   background-color:black;
+   color:white;
    border-radius:1.5rem;
    font-size:26px;
    padding:9px;
    padding-left:2px;
    width:237px;
-   border:2px solid purple;
+   border:2px solid white            ;
    margin-top:9px;
    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
   }
@@ -113,4 +120,10 @@ color:#FF6D60;
     border:2px solid yellow;
     transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
   }
+ }
+ .explore{
+  color:#FF6D60;
+ }
+ .live{
+  color:#FF6D60;
  }
