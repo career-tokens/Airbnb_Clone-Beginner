@@ -5,7 +5,7 @@
 height:5.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 901px) {
   .searchbar {
     padding:2px;
     margin-top:24px;
@@ -13,6 +13,22 @@ height:5.5rem;
     width:390px;
     border-radius:2rem;
   }
+  .search-icon{
+    margin-left:162px;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .searchbar {
+    padding:2px;
+    margin-top:24px;
+    height:44px;
+    width:300px;
+    border-radius:2rem;
+    margin-left:-78px;
+  }
+  .search-icon{
+    margin-left:75px;
+    }
 }
 @media (max-width: 576px) {
   .searchbar {
@@ -26,10 +42,11 @@ height:5.5rem;
   .globe{
     margin-right:10px;
   }
+  .search-icon{
+    margin-left:162px;
+    }
 }
-.search-icon{
-margin-left:162px;
-}
+
 .input:focus {
   outline: none;
 }
