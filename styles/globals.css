@@ -29,6 +29,9 @@ height:5.5rem;
   .search-icon{
     margin-left:75px;
     }
+    .change{
+      margin-left:24px;
+    }
 }
 @media (max-width: 576px) {
   .searchbar {
