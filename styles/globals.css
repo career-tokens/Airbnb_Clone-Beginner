@@ -1,5 +1,12 @@
 @tailwind base;
 @tailwind components;
+@layer components{
+  .button-shortcut{
+    @apply px-4 py-2 border rounded-full cursor-pointer
+    hover:shadow-lg active:scale-95 active:bg-gray-50
+    transition transform duration-100 ease-out;
+  }
+}
 @tailwind utilities;
 .h-10{
 height:5.5rem;
