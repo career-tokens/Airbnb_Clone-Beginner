@@ -16,7 +16,8 @@ function Header() {
     const [searchInput, setSearchInput] = useState("");
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
-    
+  const [noOfGuests, setNoOfGuests] = useState(1);  
+  
     const isMobile = useMediaQuery("(max-width: 767px)");
     const selectionRange = {
         startDate: startDate,
@@ -27,7 +28,11 @@ function Header() {
     const handleSelect = (ranges) => {
         setStartDate(ranges.selection.startDate);
         setEndDate(ranges.selection.endDate);
-    }
+  }
+  
+  const resetInput = () => {
+    setSearchInput("");
+  }
 
 
   return (
@@ -99,9 +104,17 @@ function Header() {
             </h2>
             <div className="noofguests flex">
             <UserIcon className=" usericon h-5" />
-            <input type="number" className="input pl-2 text-lg outline-none text-red-400" />
+              <input
+                value={noOfGuests}
+                onChange={(ev)=>{setNoOfGuests(ev.target.value)}}
+                type="number"
+                min={1}
+                className="input pl-2 text-lg outline-none text-red-400" />
             </div>
-           
+          </div>
+          <div className="flex">
+            <button onClick={resetInput}  className="cancel md:flex-grow text-gray-900">Cancel</button>
+            <button className="flex-grow text-red-500">Search</button>
           </div>
               </div>
           )}

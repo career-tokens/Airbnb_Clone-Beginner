@@ -14,7 +14,7 @@ height:5.5rem;
     border-radius:2rem;
   }
   .search-icon{
-    margin-left:162px;
+    margin-left:289px;
     }
 }
 @media (min-width: 600px) and (max-width: 900px) {
@@ -27,7 +27,7 @@ height:5.5rem;
     margin-left:-78px;
   }
   .search-icon{
-    margin-left:75px;
+    margin-left:200px;
     }
     .change{
       margin-left:24px;
@@ -134,6 +134,9 @@ color:#FF6D60;
  .input{
   width:50px;
  }
+ .cancel{
+  margin-left:300px;
+}
 }
 @media (min-width: 768px) {
   .help{
@@ -158,6 +161,7 @@ color:#FF6D60;
   .input{
     width:48px;
   }
+
  }
  .explore{
   color:#FF6D60;
@@ -171,4 +175,6 @@ color:#FF6D60;
  .usericon{
   margin-top:5px;
  }
- 
+ .guests{
+  color:#FF6D60;
+ }
