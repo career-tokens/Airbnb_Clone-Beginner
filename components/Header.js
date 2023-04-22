@@ -92,7 +92,17 @@ function Header() {
           />
         </div>
         // Render something else for larger screens
-      )}
+          )}
+          <div className="guests flex items-center border-b mb-4">
+            <h2 className="text-2xl flex-grow font-semibold">
+              Number of Guests
+            </h2>
+            <div className="noofguests flex">
+            <UserIcon className=" usericon h-5" />
+            <input type="number" className="input pl-2 text-lg outline-none text-red-400" />
+            </div>
+           
+          </div>
               </div>
           )}
         </header>
