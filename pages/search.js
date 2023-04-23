@@ -2,10 +2,13 @@ import Header from '@/components/Header'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { format } from 'date-fns';
+import InfoCard from '@/components/InfoCard';
+import Footer from '@/components/Footer';
 function search({searchResults}) {
 
   const route = useRouter();
   console.log(route.query);
+  console.log(searchResults);
   const { location, startDate, endDate, noOfGuests } = route.query;
   const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
@@ -26,9 +29,28 @@ function search({searchResults}) {
                     <p className="button-shortcut">Price</p>
                     <p className="button-shortcut">Rooms and Beds</p>
                     <p className="button-shortcut">More filters</p>
-                  </div>
+          </div>
+          <div className="flex flex-col">
+            {searchResults.map(item => (
+            <InfoCard
+                key={item.img}
+                img={item.img}
+                location={item.location}
+                description={item.description}
+                title={item.title}
+                star={item.star}
+                price={item.price}
+                total={item.total}
+                lat={item.lat}
+                long={item.long} />
+          ))}
+          </div>
+          
           </section>
-          </main>   
+      </main> 
+     
+      
+      <Footer/>
       </div>
   )
 }
