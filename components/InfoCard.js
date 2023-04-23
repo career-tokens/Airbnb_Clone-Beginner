@@ -39,7 +39,7 @@ function InfoCard({key,img,location,description,title,star,price,total,lat,long}
                         {star}
                     </p>
                     <div className="flex items-center">
-                        <button onClick={handleMapClick} className="bg-red-500 text-white font-semibold py-2 px-4 rounded">
+                        <button onClick={handleMapClick} className="map  text-white font-semibold py-2 px-4 rounded ">
                             View location on Google Maps
                         </button>
                     </div>
