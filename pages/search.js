@@ -24,7 +24,7 @@ function search({searchResults}) {
                   <h1 className="text-3xl font-semibold mt-2 mb-6">Stays on {location}</h1>
 
                   <div className="grid grid-cols-2 gap-x-14 gap-y-5 lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
-                    <p className="button-shortcut">Cancellation Flexibility</p>
+                    <p className="button-shortcut">Cancel Trip</p>
                     <p className="button-shortcut">Type of Place</p>
                     <p className="button-shortcut">Price</p>
                     <p className="button-shortcut">Rooms and Beds</p>
