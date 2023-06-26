@@ -16,4 +16,7 @@ v)uses Google Maps to show the exact location of the place using latitude and lo
 ## Cons:
 i) has got only the data for London
 ii)its a beginner-level project so does not include too many features
-## GIFs of the project:
+## Video of the Desktop version of the project:
+https://github.com/career-tokens/Airbnb_Clone-Beginner-/assets/134730030/2dbd9a16-1b03-4077-ba54-f5c53afaf663
+
+
