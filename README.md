@@ -1,3 +1,4 @@
+![image](https://github.com/career-tokens/Airbnb_Clone-Beginner-/assets/134730030/bd482015-897f-4e06-9a9d-8df800473a64)
 
 # Airbnb Clone
 
