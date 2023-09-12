@@ -8,6 +8,7 @@ It is an user-friendly platform for travelers to discover and book unique accomm
 https://airbnb-jet.vercel.app/ \
 (Security Risk will be shown but the code of the project is its own proof that the app is not harmful)\
 (You will need to go to details and visit the site)
+(Loading takes a lil bit of time)
 
 ## Tech Stack used:
 NEXT.JS , Google Maps, Tailwind CSS , Fotor Image Generator
